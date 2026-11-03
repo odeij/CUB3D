@@ -3,6 +3,11 @@
 
 # include "../libft/libft.h"
 # include "../minilibx/mlx.h"
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <string.h>
+# include <errno.h>
 
 # define WIN_WIDTH 1024
 # define WIN_HEIGHT 768
@@ -64,6 +69,13 @@ typedef struct s_game
 	t_map		map;
 	t_player	player;
 	int		keys[8];
+	char		**lines;//only used during parsing
 
 }	t_game;
+
+/* cleanup */
+void	free_split(char **arr);
+void	free_game(t_game *game);
+void	error_exit(t_game *game, char *msg);
+
 #endif
