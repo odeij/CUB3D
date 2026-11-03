@@ -1,6 +1,9 @@
 #ifndef CUB3D_H
 # define CUB3D_H
 
+# include "../libft/libft.h"
+# include "../minilibx/mlx.h"
+
 # define WIN_WIDTH 1024
 # define WIN_HEIGHT 768
 
