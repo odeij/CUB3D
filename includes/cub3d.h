@@ -8,6 +8,7 @@
 # include <fcntl.h>
 # include <string.h>
 # include <errno.h>
+# include <stdio.h>
 
 # define WIN_WIDTH 1024
 # define WIN_HEIGHT 768
