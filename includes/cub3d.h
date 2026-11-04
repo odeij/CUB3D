@@ -12,6 +12,8 @@
 # define WIN_WIDTH 1024
 # define WIN_HEIGHT 768
 
+# define BUF_SIZE 1024
+
 # define TEX_NO 0
 # define TEX_SO 1
 # define TEX_WE 2
@@ -75,7 +77,12 @@ typedef struct s_game
 
 /* cleanup */
 void	free_split(char **arr);
+/* frees tex_path[0..3], map.grid and lines (MLX cleanup: teammate) */
 void	free_game(t_game *game);
 void	error_exit(t_game *game, char *msg);
+
+/* parsing */
+int		check_extension(char *path);
+char	**read_file(char *path);
 
 #endif
